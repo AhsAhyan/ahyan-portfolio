@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="glass rounded-xl p-8 md:p-16 relative overflow-hidden anim-fade-up anim-d2"
+      className="glass rounded-xl p-6 sm:p-8 md:p-16 relative overflow-hidden anim-fade-up anim-d2"
     >
       <div
         className="absolute inset-0 -z-0 pointer-events-none"
@@ -20,7 +20,7 @@ export default function Contact() {
         }}
       />
       <div className="relative z-10 grid md:grid-cols-2 gap-12 items-center">
-        <div>
+        <div className="min-w-0">
           <p
             className="uppercase tracking-[0.4em] text-primary mb-6 text-[12px]"
             style={{ fontFamily: "var(--font-jetbrains-google)" }}
@@ -29,16 +29,18 @@ export default function Contact() {
           </p>
           <h2
             className="text-on-surface font-extrabold mb-4"
-            style={{ fontFamily: "var(--font-syne-google)", fontSize: "clamp(48px, 7vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1 }}
+            style={{ fontFamily: "var(--font-syne-google)", fontSize: "clamp(40px, 11vw, 80px)", letterSpacing: "-0.04em", lineHeight: 1 }}
           >
-            Let&apos;s <span className="text-primary italic">Talk.</span>
+            Let&apos;s
+            <br />
+            <span className="text-primary italic">Talk.</span>
           </h2>
           <p className="text-on-surface-variant max-w-md" style={{ lineHeight: 1.6 }}>
             Job, project, or just to connect — my inbox is open and I reply fast.
           </p>
         </div>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-3 min-w-0">
           {LINKS.map((link) => (
             <a
               key={link.label}
@@ -57,7 +59,7 @@ export default function Contact() {
                 >
                   {link.label}
                 </div>
-                <div className="text-on-surface text-sm truncate">{link.value}</div>
+                <div className="text-on-surface text-[13px] sm:text-sm break-words">{link.value}</div>
               </div>
               <span className="material-symbols-outlined text-on-surface-variant group-hover:text-primary group-hover:translate-x-1 transition-all">
                 arrow_outward
