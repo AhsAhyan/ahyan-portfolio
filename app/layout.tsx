@@ -39,6 +39,9 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&display=swap"
         />
+        {/* Clean, query-less apple-touch-icon — iOS ignores icon URLs with query strings */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <meta name="apple-mobile-web-app-title" content="Ahyan Ahsan" />
       </head>
       <body className="bg-background text-on-surface antialiased">{children}</body>
     </html>
